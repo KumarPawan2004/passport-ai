@@ -1,10 +1,7 @@
-flask
-flask-cors
+gradio
 opencv-python-headless
 numpy
 pillow
+mediapipe
 rembg
 onnxruntime
-mediapipe==0.10.9
-protobuf==3.20.3
-gunicorn
