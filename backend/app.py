@@ -74,7 +74,11 @@ iface = gr.Interface(
     title="AI Passport Photo Generator",
 )
 
-# MANDATORY RENDER FIX: Bind to 0.0.0.0 and optionally grab Render's PORT
+# MANDATORY RENDER FIX: Bind to 0.0.0.0 and explicitly allow your Vercel URL
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 10000))
-    iface.launch(server_name="0.0.0.0", server_port=port)
+    iface.launch(
+        server_name="0.0.0.0", 
+        server_port=port, 
+        cors_allowed_origins=["https://passport-ai-three.vercel.app"]
+    )
