@@ -36,7 +36,7 @@ function App() {
 
     try {
       // 1. Connect to your live Render backend
-      const app = await client("https://passport-ai-backend-znva.onrender.com/");
+      const app = await client("PawanKumar788/passport-backend/");
       
       // 2. Send the image file to Gradio's default /predict endpoint
       const result = await app.predict("/predict", [
